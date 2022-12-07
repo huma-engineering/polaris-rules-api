@@ -6,10 +6,6 @@ authors = ["Jon Daly <jonathan.daly@sensynehealth.com>"]
 keywords = ["Swagger", "Rules"]
 repository = "https://github.com/draysontechnologies/dhos-rules-api"
 
-[[tool.poetry.source]]
-name = "sensynehealth"
-url = "https://pypi.fury.io/sensynehealth/"
-
 [tool.poetry.dependencies]
 python = "^3.9"
 cachetools = "5.*"
