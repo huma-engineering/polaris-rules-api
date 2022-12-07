@@ -107,7 +107,7 @@ services:
 
   dhos-rules-engine:
     container_name: "dhos-rules-engine"
-    image: sensynehealth.azurecr.io/dhos/dhos-rules-engine:dev
+    image: humagdmacr.azurecr.io/dhos/dhos-rules-engine:dev
     ports:
       - "3000"
 
