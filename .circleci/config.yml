@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          poetry self update
+          poetry self update --no-ansi
           poetry config http-basic.sensynehealth ${GEMFURY_DOWNLOAD_KEY} ''
           pip install --upgrade tox
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
             - v1-poetry-deps-
       - run:
           name: Run tox tests
-          command: tox -e py39
+          command: tox -r -e py39
       - save_cache:
           key: v1-poetry-deps-{{ checksum "poetry.lock" }}
           paths:
